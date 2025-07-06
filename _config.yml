@@ -2,7 +2,7 @@
 title: Embers to Everbloom Wellness
 description: Master Clairvoyant healing services to release past traumas, clear mental blocks, and heal energetic components of health conditions
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://emberstoeverbloomwellness.github.io" # the base hostname & protocol for your site
+url: "https://emberstoeverbloomwellness.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
