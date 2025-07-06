@@ -1,0 +1,41 @@
+# Site settings
+title: Embers to Everbloom Wellness
+description: Master Clairvoyant healing services to release past traumas, clear mental blocks, and heal energetic components of health conditions
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://emberstoeverbloomwellness.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - WebsiteDetails.md
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name
+
+# Default layout
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post" 

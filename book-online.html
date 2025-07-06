@@ -1,0 +1,77 @@
+---
+layout: default
+title: Book Online
+---
+
+<section class="section">
+  <div class="container">
+    <h1 class="text-center mb-3">Book Your Healing Session</h1>
+    <p class="text-center mb-3">Ready to begin your transformation? Fill out the form below to request your healing session.</p>
+    
+    <div class="form-container">
+      <form class="contact-form" id="booking-form">
+        <input type="hidden" name="subject" value="Healing Session Booking Request">
+        
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="Name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Your Email *</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="Phone">
+        </div>
+        
+        <div class="form-group">
+          <label for="service">Service Type *</label>
+          <select id="service" name="Service Type" required>
+            <option value="">Select a service</option>
+            <option value="1.5 Hour Comprehensive Healing Session - $225">1.5 Hour Comprehensive Healing Session - $225</option>
+            <option value="1 Hour Focused Healing Session - $150">1 Hour Focused Healing Session - $150</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="date-preference">Preferred Date *</label>
+          <input type="date" id="date-preference" name="Preferred Date" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="time-preference">Preferred Time *</label>
+          <select id="time-preference" name="Preferred Time" required>
+            <option value="">Select preferred time</option>
+            <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
+            <option value="Afternoon (12pm-5pm)">Afternoon (12pm-5pm)</option>
+            <option value="Evening (5pm-8pm)">Evening (5pm-8pm)</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="concerns">What would you like to focus on during your session?</label>
+          <textarea id="concerns" name="Session Focus" rows="4" placeholder="Please share any specific concerns, goals, or areas you'd like to address during your healing session..."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="additional-info">Additional Information</label>
+          <textarea id="additional-info" name="Additional Information" rows="3" placeholder="Any scheduling preferences or other information you'd like to share..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-block">Send Booking Request</button>
+        
+        <div class="form-success" style="display: none; margin-top: 1rem; padding: 1rem; background-color: #d4edda; color: #155724; border-radius: 5px; text-align: center;">
+          Thank you for your booking request! Your email client should open with your request. If it doesn't, please send your request directly.
+        </div>
+      </form>
+      
+      <p class="text-center mt-3" style="font-size: 0.9rem; color: #666;">
+        * Required fields<br>
+        You will receive a confirmation email within 24-48 hours with available appointment times.
+      </p>
+    </div>
+  </div>
+</section> 
