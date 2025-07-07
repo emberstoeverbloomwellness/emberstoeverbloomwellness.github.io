@@ -6,15 +6,34 @@
 }
 
 :root {
-  --primary-color: #D2691E;
-  --secondary-color: #FF6347;
-  --accent-color: #FFD700;
-  --text-color: #333333;
-  --light-bg: #FFF8F0;
+  /* Ember Colors - Warm, transformative energy */
+  --ember-deep: #B84C1A;      /* Deep burnt orange - primary brand color */
+  --ember-glow: #E07548;      /* Warm coral - active states */
+  --ember-light: #F5A78E;     /* Soft peach - highlights */
+  
+  /* Bloom Colors - Growth and renewal */
+  --bloom-sage: #7A9A82;      /* Sage green - secondary color */
+  --bloom-lavender: #9B89B3;  /* Soft lavender - accents */
+  --bloom-rose: #D4A5A5;      /* Dusty rose - soft touches */
+  
+  /* Neutral Foundation */
+  --neutral-dark: #3A3A3A;    /* Charcoal - main text */
+  --neutral-medium: #6B6B6B;  /* Medium gray - secondary text */
+  --neutral-light: #E8E8E8;   /* Light gray - borders */
+  --neutral-cream: #FBF8F4;   /* Warm cream - backgrounds */
   --white: #FFFFFF;
+  
+  /* Functional Colors */
+  --primary-color: var(--ember-deep);
+  --secondary-color: var(--bloom-sage);
+  --accent-color: var(--bloom-lavender);
+  --text-color: var(--neutral-dark);
+  --light-bg: var(--neutral-cream);
   --gray-light: #F5F5F5;
-  --gray-medium: #E0E0E0;
-  --gray-dark: #666666;
+  --gray-medium: var(--neutral-light);
+  --gray-dark: var(--neutral-medium);
+  
+  /* Typography */
   --font-primary: 'Montserrat', sans-serif;
   --font-accent: 'Playfair Display', serif;
 }
@@ -24,7 +43,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--white);
+  background-color: var(--neutral-cream);
 }
 
 .container {
@@ -50,16 +69,18 @@ a {
 }
 
 a:hover {
-  color: var(--secondary-color);
+  color: var(--ember-glow);
 }
 
 /* Header Styles */
 .site-header {
-  background-color: var(--white);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(184, 76, 26, 0.08);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid rgba(184, 76, 26, 0.05);
 }
 
 .navbar {
@@ -148,7 +169,8 @@ a:hover {
 
 /* Hero Section */
 .hero {
-  background-color: var(--light-bg);
+  background: linear-gradient(135deg, rgba(184, 76, 26, 0.03) 0%, rgba(122, 154, 130, 0.03) 100%);
+  background-color: var(--white);
   padding: 4rem 0;
   text-align: center;
   margin-bottom: 3rem;
@@ -188,10 +210,13 @@ a:hover {
 
 /* Services */
 .services {
-  background-color: var(--gray-light);
+  background: linear-gradient(180deg, rgba(245, 167, 142, 0.08) 0%, rgba(155, 137, 179, 0.05) 100%);
+  background-color: var(--white);
+  border: 1px solid rgba(184, 76, 26, 0.1);
   padding: 3rem;
   border-radius: 10px;
   margin: 2rem 0;
+  box-shadow: 0 2px 15px rgba(184, 76, 26, 0.08);
 }
 
 .services-list {
@@ -219,7 +244,7 @@ a:hover {
 .service-price {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--secondary-color);
+  color: var(--bloom-sage);
 }
 
 /* Forms */
@@ -227,8 +252,11 @@ a:hover {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: var(--gray-light);
+  background: linear-gradient(145deg, rgba(122, 154, 130, 0.05) 0%, rgba(212, 165, 165, 0.05) 100%);
+  background-color: var(--white);
+  border: 1px solid rgba(122, 154, 130, 0.15);
   border-radius: 10px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
 }
 
 .form-group {
@@ -251,14 +279,17 @@ a:hover {
   border-radius: 5px;
   font-family: var(--font-primary);
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: var(--bloom-sage);
+  background-color: var(--white);
+  box-shadow: 0 0 0 3px rgba(122, 154, 130, 0.1);
 }
 
 .form-group textarea {
@@ -280,9 +311,9 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--ember-glow);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(184, 76, 26, 0.3);
 }
 
 .btn-block {
@@ -334,11 +365,19 @@ a:hover {
 
 /* Resources Section */
 .resource-card {
-  background-color: var(--light-bg);
+  background: linear-gradient(180deg, rgba(155, 137, 179, 0.08) 0%, rgba(122, 154, 130, 0.05) 100%);
+  background-color: var(--white);
+  border: 1px solid rgba(155, 137, 179, 0.15);
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
   margin: 2rem 0;
+  transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+  box-shadow: 0 5px 25px rgba(155, 137, 179, 0.15);
+  transform: translateY(-2px);
 }
 
 .resource-card h3 {
@@ -348,10 +387,21 @@ a:hover {
 
 /* Footer */
 .site-footer {
-  background-color: var(--text-color);
+  background: linear-gradient(180deg, #2A2A2A 0%, #1F1F1F 100%);
   color: var(--white);
   padding: 3rem 0 1rem;
   margin-top: 3rem;
+  position: relative;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--ember-glow) 50%, transparent 100%);
 }
 
 .footer-content {
@@ -362,7 +412,7 @@ a:hover {
 }
 
 .footer-section h3 {
-  color: var(--accent-color);
+  color: var(--ember-light);
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
@@ -402,10 +452,12 @@ a:hover {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--white);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
     flex-direction: column;
     padding: 1rem;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(184, 76, 26, 0.15);
+    border: 1px solid rgba(184, 76, 26, 0.05);
   }
   
   .nav-menu.active {
@@ -439,4 +491,47 @@ a:hover {
 .mb-3 { margin-bottom: 3rem; }
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
-.mt-3 { margin-top: 3rem; } 
+.mt-3 { margin-top: 3rem; }
+
+/* Theme-specific enhancements */
+.hero h1 {
+  background: linear-gradient(135deg, var(--ember-deep) 0%, var(--ember-glow) 50%, var(--bloom-sage) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.service-name {
+  color: var(--ember-deep);
+  transition: color 0.3s ease;
+}
+
+.services-list li:hover .service-name {
+  color: var(--ember-glow);
+}
+
+/* Add subtle bloom accent to section backgrounds */
+.section-light {
+  background: linear-gradient(180deg, var(--neutral-cream) 0%, rgba(155, 137, 179, 0.05) 100%);
+}
+
+/* Main content background pattern */
+.main-content {
+  position: relative;
+  background-color: var(--neutral-cream);
+}
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(184, 76, 26, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(122, 154, 130, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(155, 137, 179, 0.01) 0%, transparent 50%);
+  pointer-events: none;
+} 
