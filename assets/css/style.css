@@ -363,6 +363,27 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+/* Fullscript Product Embeds */
+.fullscript-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.fullscript-product .product-title {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.fullscript-product iframe {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
 /* Resources Section */
 .resource-card {
   background: linear-gradient(180deg, rgba(155, 137, 179, 0.08) 0%, rgba(122, 154, 130, 0.05) 100%);
