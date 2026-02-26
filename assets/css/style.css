@@ -348,6 +348,12 @@ a:hover {
   object-fit: cover;
 }
 
+.product-image.contain {
+  object-fit: contain;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
 .product-info {
   padding: 1.5rem;
 }
